@@ -1,0 +1,27 @@
+{
+  "name": "Cookie Cats AB Test",
+  "dataColors": ["#2E5EAA", "#D96C3F", "#6B7280", "#94A3B8", "#C7CDD6"],
+  "background": "#FFFFFF",
+  "foreground": "#1F2937",
+  "tableAccent": "#2E5EAA",
+  "good": "#1A7F37",
+  "bad": "#C53030",
+  "neutral": "#6B7280",
+  "maximum": "#2E5EAA",
+  "center": "#E5E7EB",
+  "minimum": "#D96C3F",
+  "textClasses": {
+    "callout": { "color": "#1F2937" },
+    "title": { "color": "#1F2937", "fontSize": 14, "fontFace": "Segoe UI Semibold" },
+    "header": { "color": "#1F2937" },
+    "label": { "color": "#4B5563" }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [{ "show": false }],
+        "border": [{ "show": false }]
+      }
+    }
+  }
+}

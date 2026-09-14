@@ -1,0 +1,7 @@
+KPI,Value
+Total Users,90189
+gate_30 Users,44700
+gate_40 Users,45489
+"Day-7 Retention Lift (gate_30 vs gate_40, pp)",0.82
+Day-7 p-value,0.0016
+Recommendation,Keep gate at level 30

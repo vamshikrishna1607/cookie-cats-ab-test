@@ -56,6 +56,14 @@ enough, at Cookie Cats' scale, to meaningfully affect the retained player base o
 offsetting engagement benefit to moving the gate later. A follow-up test with a longer observation window
 (Day-14/Day-30 *measured*, not projected) would further de-risk this decision before a permanent rollout.
 
+## Power BI Dashboard
+
+The Python analysis feeds a companion Power BI dashboard (4 pages: Overview, Retention
+Results, Engagement, Retention Forecast) — statistical rigor stays in Python, Power BI
+handles the interactive presentation layer. See `dashboard/POWERBI_BUILD_GUIDE.md` for
+the full build steps, DAX measures, and layout, and `dashboard/CookieCats_PowerBI_Theme.json`
+for the matching color theme.
+
 ## Repo Structure
 
 ```
@@ -63,14 +71,14 @@ notebooks/
   AB_Test_Cookie_Cats_Analysis.ipynb   <- full analysis, run this one
   01_eda.py ... 05_charts.py           <- source scripts the notebook is built from
 dashboard/
-  retention_rates.png
-  rounds_distribution.png
-  srm_check.png
-  retention_curve_forecast.png
+  retention_rates.png / rounds_distribution.png / srm_check.png / retention_curve_forecast.png
+  POWERBI_BUILD_GUIDE.md               <- step-by-step Power BI build guide
+  CookieCats_PowerBI_Theme.json        <- Power BI custom theme (matches chart colors)
 data/
   cookie_cats.csv
-  retention_test_results.csv
-  retention_curve_results.csv
+  retention_test_results.csv / retention_curve_results.csv
+  powerbi_kpi_cards.csv / powerbi_retention_summary.csv
+  powerbi_retention_curve.csv / powerbi_engagement_bins.csv
 ```
 
 ## How to Run
