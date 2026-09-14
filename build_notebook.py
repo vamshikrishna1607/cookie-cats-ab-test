@@ -118,6 +118,6 @@ observation window would close that gap.
 """)
 
 nb['cells'] = cells
-with open('/home/claude/ab-test-project/notebooks/AB_Test_Cookie_Cats_Analysis.ipynb', 'w') as f:
+with open('notebooks/AB_Test_Cookie_Cats_Analysis.ipynb', 'w') as f:
     nbf.write(nb, f)
 print("Notebook written.")

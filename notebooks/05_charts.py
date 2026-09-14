@@ -8,7 +8,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from statsmodels.stats.proportion import proportion_confint
 
-df = pd.read_csv("/home/claude/ab-test-project/data/cookie_cats.csv")
+df = pd.read_csv("data/cookie_cats.csv")
 colors = {"gate_30": "#2E5EAA", "gate_40": "#D96C3F"}
 
 # --- Chart 1: Retention rates with 95% Wilson CIs ---
@@ -32,7 +32,7 @@ for ax, metric, title in zip(axes, ["retention_1", "retention_7"], ["Day-1 Reten
         ax.text(bar.get_x() + bar.get_width()/2, r + 1.5, f"{r:.1f}%", ha="center", fontsize=9)
 plt.suptitle("Retention by Variant (error bars = 95% Wilson CI)")
 plt.tight_layout()
-plt.savefig("/home/claude/ab-test-project/dashboard/retention_rates.png", dpi=150)
+plt.savefig("dashboard/retention_rates.png", dpi=150)
 plt.close()
 
 # --- Chart 2: Rounds played distribution (outlier excluded, log scale) ---
@@ -49,7 +49,7 @@ ax.set_title("Engagement Distribution by Variant (outlier excluded, log scale)")
 ax.legend()
 ax.spines[["top", "right"]].set_visible(False)
 plt.tight_layout()
-plt.savefig("/home/claude/ab-test-project/dashboard/rounds_distribution.png", dpi=150)
+plt.savefig("dashboard/rounds_distribution.png", dpi=150)
 plt.close()
 
 # --- Chart 3: SRM check ---
@@ -65,7 +65,7 @@ ax.set_ylabel("Users")
 ax.legend(fontsize=8)
 ax.spines[["top", "right"]].set_visible(False)
 plt.tight_layout()
-plt.savefig("/home/claude/ab-test-project/dashboard/srm_check.png", dpi=150)
+plt.savefig("dashboard/srm_check.png", dpi=150)
 plt.close()
 
 print("Saved 3 charts to dashboard/: retention_rates.png, rounds_distribution.png, srm_check.png")

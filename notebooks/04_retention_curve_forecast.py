@@ -18,7 +18,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("/home/claude/ab-test-project/data/cookie_cats.csv")
+df = pd.read_csv("data/cookie_cats.csv")
 
 def fit_power_law(r1, r7):
     a = r1
@@ -60,7 +60,7 @@ ax.set_title("Retention Curve: Measured (Day 1, 7) vs. Projected (power-law extr
 ax.legend(fontsize=8)
 ax.spines[["top", "right"]].set_visible(False)
 plt.tight_layout()
-plt.savefig("/home/claude/ab-test-project/dashboard/retention_curve_forecast.png", dpi=150)
+plt.savefig("dashboard/retention_curve_forecast.png", dpi=150)
 print("\nSaved chart to dashboard/retention_curve_forecast.png")
 
-pd.DataFrame(results).T.to_csv("/home/claude/ab-test-project/data/retention_curve_results.csv")
+pd.DataFrame(results).T.to_csv("data/retention_curve_results.csv")

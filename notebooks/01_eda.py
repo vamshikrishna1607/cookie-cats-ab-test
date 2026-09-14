@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 from scipy import stats
 
-df = pd.read_csv("/home/claude/ab-test-project/data/cookie_cats.csv")
+df = pd.read_csv("data/cookie_cats.csv")
 
 print("=== Shape & dtypes ===")
 print(df.shape)

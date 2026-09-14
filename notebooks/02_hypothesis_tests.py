@@ -11,7 +11,7 @@ from statsmodels.stats.power import NormalIndPower
 from statsmodels.stats.proportion import proportion_effectsize
 
 np.random.seed(42)
-df = pd.read_csv("/home/claude/ab-test-project/data/cookie_cats.csv")
+df = pd.read_csv("data/cookie_cats.csv")
 
 def test_retention(metric):
     print(f"\n{'='*60}\nMetric: {metric}\n{'='*60}")
@@ -72,5 +72,5 @@ results = []
 for m in ["retention_1", "retention_7"]:
     results.append(test_retention(m))
 
-pd.DataFrame(results).to_csv("/home/claude/ab-test-project/data/retention_test_results.csv", index=False)
+pd.DataFrame(results).to_csv("data/retention_test_results.csv", index=False)
 print("\nSaved results to data/retention_test_results.csv")
